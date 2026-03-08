@@ -1,6 +1,6 @@
-# 🎓 Campus Karma Hub
+# 🎓 UNICAMP
 
-Campus Karma Hub is a modern, full-stack campus management and community platform designed to bridge the gap between students, administration, and campus life. It streamlines event management, professional networking, and student interactions through a sleek, unified interface.
+UNICAMP is a modern, full-stack campus management and community platform designed to bridge the gap between students, administration, and campus life. It streamlines event management, professional networking, and student interactions through a sleek, unified interface.
 
 ## 🚀 Features
 
