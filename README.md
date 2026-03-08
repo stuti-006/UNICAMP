@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 # 🎓 Unicamp
 
 Unicamp is a modern, full-stack campus management and community platform designed to bridge the gap between students, administration, and campus life. It streamlines event management, professional networking, and student interactions through a sleek, unified interface.
+=======
+# 🎓 UNICAMP
+
+UNICAMP is a modern, full-stack campus management and community platform designed to bridge the gap between students, administration, and campus life. It streamlines event management, professional networking, and student interactions through a sleek, unified interface.
+>>>>>>> 9a8ee34e308df1e5748bfac585dce823ec7e42d1
 
 ## 🚀 Features
 

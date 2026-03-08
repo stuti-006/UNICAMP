@@ -81,7 +81,7 @@ export default function AdminLeaderboard() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2"><Award className="w-5 h-5"/> Manual Achievements & Adjustments</CardTitle>
-          <CardDescription>Directly award Karma Points to a user for special achievements or manual corrections.</CardDescription>
+          <CardDescription>Directly award Points to a user for special achievements or manual corrections.</CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleManualPoints} className="space-y-4">
@@ -117,7 +117,7 @@ export default function AdminLeaderboard() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2"><Trophy className="w-5 h-5"/> Declare Hackathon Winners</CardTitle>
-          <CardDescription>Select an event and record the winning teams to automatically distribute Karma Points.</CardDescription>
+          <CardDescription>Select an event and record the winning teams to automatically distribute Points.</CardDescription>
         </CardHeader>
         <CardContent>
           <div className="bg-muted p-6 rounded-md text-center text-muted-foreground">
