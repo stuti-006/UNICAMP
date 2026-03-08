@@ -6,6 +6,8 @@ import AdminDashboard from './admin/AdminDashboard';
 import AdminUsers from './admin/AdminUsers';
 import AdminListings from './admin/AdminListings';
 import AdminEvents from './admin/AdminEvents';
+import AdminLeaderboard from './admin/AdminLeaderboard';
+import { Trophy } from 'lucide-react';
 
 const Admin = () => {
   const { isStaff } = useAuth();
@@ -20,7 +22,7 @@ const Admin = () => {
 
       <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
         {!isStaff && (
-          <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 bg-muted">
+          <TabsList className="grid w-full grid-cols-2 lg:grid-cols-5 bg-muted">
             <TabsTrigger value="dashboard" className="gap-2">
               <LayoutDashboard className="w-4 h-4" />
               Dashboard
@@ -36,6 +38,10 @@ const Admin = () => {
             <TabsTrigger value="events" className="gap-2">
               <Calendar className="w-4 h-4" />
               Events
+            </TabsTrigger>
+            <TabsTrigger value="leaderboard" className="gap-2">
+              <Trophy className="w-4 h-4" />
+              Leaderboard
             </TabsTrigger>
           </TabsList>
         )}
@@ -54,6 +60,10 @@ const Admin = () => {
 
         <TabsContent value="events">
           <AdminEvents />
+        </TabsContent>
+
+        <TabsContent value="leaderboard">
+          <AdminLeaderboard />
         </TabsContent>
       </Tabs>
     </div>

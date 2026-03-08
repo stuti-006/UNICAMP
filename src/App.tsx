@@ -19,6 +19,7 @@ import Profile from "./pages/Profile";
 import Admin from "./pages/Admin";
 import EventAttendance from "./pages/admin/EventAttendance";
 import NotFound from "./pages/NotFound";
+import Leaderboard from "./pages/Leaderboard";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +43,7 @@ const App = () => (
             <Route path="/profile" element={<ProtectedRoute><AppLayout><Profile /></AppLayout></ProtectedRoute>} />
             <Route path="/admin" element={<ProtectedRoute requireAdmin><AppLayout><Admin /></AppLayout></ProtectedRoute>} />
             <Route path="/admin/events/:eventId" element={<ProtectedRoute requireAdmin><AppLayout><EventAttendance /></AppLayout></ProtectedRoute>} />
+            <Route path="/leaderboard" element={<ProtectedRoute><AppLayout><Leaderboard /></AppLayout></ProtectedRoute>} />
             <Route path="*" element={<NotFound />} />
             </Routes>
           </AuthProvider>

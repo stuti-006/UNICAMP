@@ -342,9 +342,178 @@ export type Database = {
           },
         ]
       }
+      hackathon_results: {
+        Row: {
+          created_at: string
+          hackathon_id: string
+          id: string
+          points_awarded: number
+          position: number
+          team_id: string
+        }
+        Insert: {
+          created_at?: string
+          hackathon_id: string
+          id?: string
+          points_awarded?: number
+          position: number
+          team_id: string
+        }
+        Update: {
+          created_at?: string
+          hackathon_id?: string
+          id?: string
+          points_awarded?: number
+          position?: number
+          team_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "hackathon_results_hackathon_id_fkey"
+            columns: ["hackathon_id"]
+            isOneToOne: false
+            referencedRelation: "events"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "hackathon_results_team_id_fkey"
+            columns: ["team_id"]
+            isOneToOne: false
+            referencedRelation: "teams"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      leaderboard_scores: {
+        Row: {
+          event_participations: number
+          hackathon_participations: number
+          hackathon_wins: number
+          id: string
+          karma_points: number
+          last_updated: string
+          user_id: string
+        }
+        Insert: {
+          event_participations?: number
+          hackathon_participations?: number
+          hackathon_wins?: number
+          id?: string
+          karma_points?: number
+          last_updated?: string
+          user_id: string
+        }
+        Update: {
+          event_participations?: number
+          hackathon_participations?: number
+          hackathon_wins?: number
+          id?: string
+          karma_points?: number
+          last_updated?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "leaderboard_scores_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: true
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      team_members: {
+        Row: {
+          created_at: string
+          id: string
+          team_id: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          team_id: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          team_id?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "team_members_team_id_fkey"
+            columns: ["team_id"]
+            isOneToOne: false
+            referencedRelation: "teams"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "team_members_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      teams: {
+        Row: {
+          created_at: string
+          id: string
+          leader_id: string
+          team_name: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          leader_id: string
+          team_name: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          leader_id?: string
+          team_name?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "teams_leader_id_fkey"
+            columns: ["leader_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
-      [_ in never]: never
+      global_leaderboard: {
+        Row: {
+          department: string | null
+          event_participations: number | null
+          hackathon_participations: number | null
+          hackathon_wins: number | null
+          karma_points: number | null
+          name: string | null
+          rank: number | null
+          semester: number | null
+          user_id: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "leaderboard_scores_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: true
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          }
+        ]
+      }
     }
     Functions: {
       is_admin: { Args: { _user_id: string }; Returns: boolean }

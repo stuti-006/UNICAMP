@@ -13,7 +13,8 @@ import {
   User,
   ShieldCheck,
   LogOut,
-  GraduationCap
+  GraduationCap,
+  Trophy
 } from 'lucide-react';
 import { ThemeToggle } from '@/components/ThemeToggle';
 
@@ -29,6 +30,7 @@ const AppLayout = ({ children }: AppLayoutProps) => {
     { icon: Home, label: 'Home', path: '/' },
     { icon: ShoppingBag, label: 'Marketplace', path: '/marketplace' },
     ...(!isStaff ? [{ icon: Calendar, label: 'Events', path: '/events' }] : []),
+    { icon: Trophy, label: 'Leaderboard', path: '/leaderboard' },
     { icon: FileText, label: 'LinkedIn Assistant', path: '/linkedin' },
     { icon: User, label: 'Profile', path: '/profile' },
     ...(isAdmin || isStaff ? [{ icon: ShieldCheck, label: 'Admin', path: '/admin' }] : []),
