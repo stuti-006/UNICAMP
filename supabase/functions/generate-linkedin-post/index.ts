@@ -52,8 +52,8 @@ Keep it humble, grateful, and motivating. Use 1-2 relevant emojis. Length: 150-2
       headers: {
         Authorization: `Bearer ${OPENROUTER_API_KEY}`,
         "Content-Type": "application/json",
-        "HTTP-Referer": "https://campus-karma-hub.app",
-        "X-Title": "Campus Karma Hub",
+        "HTTP-Referer": "https://unicamp.app",
+        "X-Title": "Unicamp",
       },
       body: JSON.stringify({
         model: "amazon/nova-2-lite-v1:free",

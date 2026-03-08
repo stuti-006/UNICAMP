@@ -2,7 +2,7 @@
     "name": "import-users-script",
     "version": "1.0.0",
     "type": "module",
-    "description": "Bulk user import script for Campus Karma Hub",
+    "description": "Bulk user import script for Unicamp",
     "scripts": {
         "import": "node import-users.js"
     },

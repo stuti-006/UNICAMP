@@ -63,7 +63,7 @@ const AppLayout = ({ children }: AppLayoutProps) => {
             <div className="flex items-center justify-center w-10 h-10 rounded-full gradient-primary shadow-orange">
               <GraduationCap className="w-6 h-6 text-primary-foreground" />
             </div>
-            <span className="text-xl font-bold text-foreground">Campus Karma</span>
+            <span className="text-xl font-bold text-foreground">Unicamp</span>
           </div>
 
           <div className="flex items-center gap-4">

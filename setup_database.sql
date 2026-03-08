@@ -1,4 +1,4 @@
--- Complete database setup for Campus Karma Hub
+-- Complete database setup for Unicamp
 -- Run this in your Supabase SQL Editor
 -- WARNING: This will DROP all existing tables and data!
 

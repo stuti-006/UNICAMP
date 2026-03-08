@@ -95,7 +95,7 @@ const Auth = () => {
           toast.error(error.message || 'Failed to sign up');
         }
       } else {
-        toast.success('Account created! Welcome to Campus Karma!');
+        toast.success('Account created! Welcome to Unicamp!');
         // Note: Navigation will be handled by the useEffect that checks user role
         // navigate('/'); - Removed this as useEffect will handle the redirect
       }
@@ -126,7 +126,7 @@ const Auth = () => {
             )}
           </div>
           <h1 className="text-3xl font-bold text-foreground mb-2">
-            {isAdminLogin ? 'Admin Portal' : 'Campus Karma'}
+            {isAdminLogin ? 'Admin Portal' : 'Unicamp'}
           </h1>
           <p className="text-muted-foreground">
             {isAdminLogin 

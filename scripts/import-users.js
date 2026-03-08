@@ -1,5 +1,5 @@
 /**
- * Bulk User Import Script for Campus Karma Hub
+ * Bulk User Import Script for Unicamp
  * Supports both CSV and Excel (.xlsx) files
  * 
  * This script imports student data and creates:
@@ -274,7 +274,7 @@ async function importUsers(filePath) {
     // Save credentials to file for easy reference
     if (results.success.length > 0) {
         const credentialsFile = `user-credentials-${timestamp}.txt`;
-        let credentialsText = 'CAMPUS KARMA HUB - USER CREDENTIALS\n';
+        let credentialsText = 'UNICAMP - USER CREDENTIALS\n';
         credentialsText += '='.repeat(60) + '\n\n';
         results.success.forEach(user => {
             credentialsText += `Email: ${user.email}\n`;

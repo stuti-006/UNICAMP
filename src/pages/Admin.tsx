@@ -17,7 +17,7 @@ const Admin = () => {
     <div className="space-y-6">
       <div>
         <h1 className="text-3xl font-bold">Admin Portal</h1>
-        <p className="text-muted-foreground mt-1">Manage your Campus Karma platform</p>
+        <p className="text-muted-foreground mt-1">Manage your Unicamp platform</p>
       </div>
 
       <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">

@@ -1,9 +1,11 @@
-# 🎓 Campus Karma Hub
+# 🎓 Unicamp
 
-Campus Karma Hub is a modern, full-stack campus management and community platform designed to bridge the gap between students, administration, and campus life. It streamlines event management, professional networking, and student interactions through a sleek, unified interface.
+Unicamp is a modern, full-stack campus management and community platform designed to bridge the gap between students, administration, and campus life. It streamlines event management, professional networking, and student interactions through a sleek, unified interface.
 
 ## 🚀 Features
 
+- **🏆 Gamified Leaderboard**: Earn Karma points through campus engagement and compete on Global, Department, and Semester leaderboards.
+- **💻 Hackathons & Challenges**: Participate in campus-wide hackathons, submit projects, and unlock exclusive achievements.
 - **🛡️ Admin Portal**: Comprehensive dashboard for managing campus events, users, and platform settings.
 - **📅 Event Management**: Discover, register, and track campus events with real-time updates.
 - **💼 LinkedIn Integration**: AI-powered LinkedIn post generation (`generate-linkedin-post` Edge Function) to showcase campus activities professionally.
@@ -31,7 +33,7 @@ Campus Karma Hub is a modern, full-stack campus management and community platfor
 ## 📂 Project Structure
 
 ```text
-campus-karma-hub/
+unicamp/
 ├── src/
 │   ├── components/      # Reusable UI components (shadcn/ui + custom)
 │   ├── contexts/        # React Contexts (Auth, etc.)
@@ -59,7 +61,7 @@ campus-karma-hub/
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/kushal-byte/CAMPUS-KARMA.git
-   cd campus-karma-hub
+   cd unicamp
    ```
 
 2. **Install dependencies**:
@@ -93,6 +95,4 @@ The project is configured for easy deployment via **Vercel** or **Netlify**.
 
 This project is private and for internal campus use.
 
----
 
-Built with ❤️ for the Campus Community.

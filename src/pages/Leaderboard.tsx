@@ -46,8 +46,8 @@ export default function Leaderboard() {
           table: 'leaderboard_scores',
         },
         () => {
-          // When a change happens, invalidate the query to refetch the leaderboard
-          queryClient.invalidateQueries({ queryKey: ["leaderboard", "global"] });
+          // When a change happens, proactively refetch the leaderboard
+          queryClient.refetchQueries({ queryKey: ["leaderboard", "global"] });
         }
       )
       .subscribe();
@@ -108,7 +108,7 @@ export default function Leaderboard() {
               </div>
               <div className="text-center mb-2 mt-4">
                 <p className="font-bold text-sm md:text-base truncate w-20 md:w-28">{user.name}</p>
-                <p className="text-xs text-muted-foreground">{user.karma_points} KP</p>
+                <p className="text-xs text-muted-foreground">{user.karma_points} Points</p>
               </div>
               <div className={`w-20 md:w-28 ${heightClass} ${colorClass} border-t-2 border-l border-r rounded-t-lg flex justify-center pt-4`}>
                 <Trophy className={`w-8 h-8 ${iconColor} opacity-50`} />
@@ -144,7 +144,7 @@ export default function Leaderboard() {
               </div>
               <div className="flex flex-col items-end gap-1">
                 <Badge variant="secondary" className="font-bold">
-                  {user.karma_points} KP
+                  {user.karma_points} Points
                 </Badge>
                 <div className="flex gap-2 text-xs text-muted-foreground hidden md:flex">
                   <span className="flex items-center gap-1"><Target className="w-3 h-3"/> {user.event_participations} Events</span>
@@ -163,7 +163,7 @@ export default function Leaderboard() {
       <main className="container max-w-5xl mx-auto px-4 pt-12 pb-12">
         <div className="mb-8 text-center space-y-4">
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">
-            Campus <span className="text-primary">Karma Leaderboard</span>
+            Unicamp <span className="text-primary">Leaderboard</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Compete in hackathons, attend events, and build your achievements to rise to the top of the campus!
@@ -198,7 +198,7 @@ export default function Leaderboard() {
                 </>
               ) : (
                 <div className="text-center py-12 text-muted-foreground">
-                  No karma points awarded yet. Be the first!
+                  No points awarded yet. Be the first!
                 </div>
               )}
             </TabsContent>
