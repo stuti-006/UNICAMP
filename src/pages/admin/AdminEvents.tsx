@@ -98,7 +98,8 @@ const AdminEvents = () => {
     setUploading(true);
     try {
       const fileExt = imageFile.name.split('.').pop();
-      const fileName = `events/${Date.now()}.${fileExt}`;
+      // Use user.id as the folder name to bypass RLS "Users can upload their own selfies" policy
+      const fileName = `${user.id}/${Date.now()}.${fileExt}`;
 
       const { error: uploadError } = await supabase.storage
         .from('event-selfies')
